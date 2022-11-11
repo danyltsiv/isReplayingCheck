@@ -13,6 +13,7 @@ import * as df from "durable-functions"
 
 const orchestrator = df.orchestrator(function* (context) {
     
+    // comment this line, the bug disappears and last log will fire
     yield context.df.callActivity("F2");
     
     const tasks = [];
